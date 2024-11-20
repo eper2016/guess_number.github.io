@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>GUESS MY NUMBER</title>
+        <link rel="stylesheet" href="guess_num.css"> 
+    </head> 
+    <body>
+        <div class="box">
+            <header> 
+                <h1>Guess My Number</h1>
+                <h2 style="color: red;">RULES: </h2>
+            </header>
+            <ul>
+                <li>You get 3 tries!</li>
+                <li>My number is only between 0-100</li>
+            </ul>
+        </div>
+        <div class="box"> 
+           
+            <input type="number" class="input" id="guess_num" value="10" placeholder="Input a number">
+            <h3 class="message">Result: <span id="message"></span></h3>
+            <h4 class ="msg2"># Of Tries Left: <span id="tries"></span></h4>
+            <h5 class="msg3"> <span id="reset"></span></h5>
+            <p><b>Here's a hint:</b>
+                <ul style="list-style-type: square">
+                    
+                    <li>Hot Potato &rarr; &Delta; is less/equal than 20</li>
+                    <li>Hotter &rarr; &Delta; is less/equal than 10</li>
+                    <li>&#128293; Potato &rarr; &Delta; is less/equal than 5 </li>
+                    ------------------------------------------------
+                    <li>Cold Potato &rarr; &Delta; is greater than 20</li>
+                    <li>Colder &rarr; &Delta; is greater/equal than 30 </li>
+                    <li>&#10052; Potato &rarr; &Delta; is greater/equal than 40 </li>
+                </ul>  
+                Another hint: <span id="hint" style="font-weight: bold;color: red;"></span> </p>
+        </div>
+        <div class="box2">
+            <button class="btn" id="btn1">Check</button>
+            <button class="btn" id="btn2">Hint</button>
+            <button class="btn" id="btn3">Reset</button>
+        </div>
+
+        <script src="project.js"></script>
+    </body>
+</html>
