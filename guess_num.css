@@ -1,6 +1,6 @@
 body {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background: linear-gradient(45deg, rgb(248, 205, 205) 23.2%, rgb(149, 170, 211) 77%);
     min-height: 100vh;
     justify-content: center;
@@ -17,7 +17,25 @@ body {
         margin: 5px; 
     }
     .box2 {
-        display:flexbox; 
+        display:flex; 
+        flex-direction: column;
+        background-color:linear-gradient(45deg, rgb(248, 205, 205) 23.2%, rgb(149, 170, 211) 77%);
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        padding: 20px;
+        margin: 5px; 
+    }
+    .box3 {
+        display: flex; 
+        flex-direction: column;
+        background-color:linear-gradient(45deg, rgb(248, 205, 205) 23.2%, rgb(149, 170, 211) 77%);
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        padding: 20px;
+        margin: 5px; 
+    }
+    .box4 {
+        display: flex; 
         flex-direction: column;
         background-color:linear-gradient(45deg, rgb(248, 205, 205) 23.2%, rgb(149, 170, 211) 77%);
         border-radius: 5px;
@@ -53,8 +71,4 @@ body {
         background-color: pink;
         color: white; 
     }
-
- 
-   
-
 }
