@@ -4,24 +4,31 @@
         <meta charset="UTF-8"> 
         <title>GUESS MY NUMBER</title>
         <link rel="stylesheet" href="guess_num.css"> 
-    </head> 
+    </head>
+
     <body>
         <div class="box">
             <header> 
                 <h1>Guess My Number</h1>
-                <h2 style="color: red;">RULES: </h2>
+                <h2>Select the amount of tries:</h2>
+                <select name="amount_tries" id="amount_tries">
+                    <option value=3>Feeling Lucky 3</option>
+                    <option value=5>Meh... 5</option>
+                    <option value=10>Taking my Time 10</option>
+                </select> 
+                <button class="btn" id="btn_tries">Submit</button>
+                <h3 style="color: red;">RULES: </h2>
             </header>
             <ul>
-                <li>You get 3 tries!</li>
+                <li>Amount of tries selected: <span id="num_tries"></span></li>
                 <li>My number is only between 0-100</li>
+                <li>You must RESET before changing your # of tries</li>
+                
             </ul>
         </div>
+
+
         <div class="box"> 
-           
-            <input type="number" class="input" id="guess_num" value="10" placeholder="Input a number">
-            <h3 class="message">Result: <span id="message"></span></h3>
-            <h4 class ="msg2"># Of Tries Left: <span id="tries"></span></h4>
-            <h5 class="msg3"> <span id="reset"></span></h5>
             <p><b>Here's a hint:</b>
                 <ul style="list-style-type: square">
                     
@@ -35,7 +42,16 @@
                 </ul>  
                 Another hint: <span id="hint" style="font-weight: bold;color: red;"></span> </p>
         </div>
-        <div class="box2">
+        
+        <div class="box3" id="box3" style="visibility: hidden;"> 
+           
+            <input type="number" class="input" id="guess_num" value="10" placeholder="Input a number">
+            <h3 class="message">Result: <span id="message"></span></h3>
+            <h4 class ="msg2"># Of Tries Left: <span id="tries"></span></h4>
+            <h5 class="msg3"> <span id="reset"></span></h5>
+           
+        </div>
+        <div class="box4" id="box4" style="visibility: hidden;">
             <button class="btn" id="btn1">Check</button>
             <button class="btn" id="btn2">Hint</button>
             <button class="btn" id="btn3">Reset</button>
