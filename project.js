@@ -1,15 +1,27 @@
 let button = document.getElementById('btn1'); 
 let hint_button = document.getElementById('btn2');
 let reset_btn = document.getElementById('btn3');
+ 
+
+let start_tries = document.getElementById('btn_tries'); 
 let guess_number = document.getElementById('guess_num');
 let text_result = document.getElementById('message'); 
 let num_tries = document.getElementById('tries'); 
 let game_over = document.getElementById('reset'); 
 let hint_msg = document.getElementById('hint'); 
-let tries = 3; 
+let tries;
 let hint = 1; 
 let r1; 
 r1 = generate_randNum();
+// document.getElementById('box3').style.visibility = ''; 
+
+function get_tries()
+{
+    tries = document.getElementById('amount_tries').value;
+    console.log(tries);
+    document.getElementById('box3').style.visibility = 'visible'; 
+    document.getElementById('box4').style.visibility = 'visible'; 
+}
 
 function generate_randNum() 
 {
@@ -48,8 +60,8 @@ function resetGame(num)
         game_over.innerHTML = "My number was: " + r1; 
     }  
     
-    // console.log(tries);
-    tries = 3;
+    // console.log(tries); 
+    tries = document.getElementById('amount_tries').value;;
     num_tries.innerHTML = "Resetting..."; 
     hint_msg.innerHTML =""; 
     document.getElementById('btn2').disabled = false;
@@ -64,7 +76,7 @@ function evaluation_num()
 
     let g1 = document.getElementById('guess_num').value;
     let new_msg; 
-        
+
     /* get the absolute differencec of the 
     random number and the inputted number. */
     let t = Math.abs(r1 - g1); 
@@ -126,11 +138,8 @@ function evaluation_num()
 }
 function hint_odd_even() 
 {
-    console.log(r1); 
-    console.log(hint); 
     let m1; 
     
-
     if (r1 % 2 == 0)
     {
         m1 = "It's an even number!"
@@ -162,3 +171,4 @@ function hint_odd_even()
 button.addEventListener("click", evaluation_num);
 hint_button.addEventListener("click", hint_odd_even);
 reset_btn.addEventListener("click", resetGame);
+start_tries.addEventListener("click", get_tries); 
